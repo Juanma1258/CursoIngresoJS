@@ -46,7 +46,7 @@ function dividir()
     dos = document.getElementById("numeroDos").value;
     uno = parseInt(uno);
     dos = parseInt(dos);
-    dividir = uno % dos
+    dividir = uno / dos
     alert("la división es " + dividir);
 }
 
