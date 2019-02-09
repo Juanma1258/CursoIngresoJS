@@ -3,13 +3,14 @@ transformarlo a entero (parseInt), luego
 mostrar el importe con un aumento del 10 %
 en el cuadro de texto "RESULTADO".*/
 var sueldo;
-var resultado;
+var sueldoconAumento;
+var aumento;
 function mostrarAumento()
-{
-sueldo = document.getElementById("sueldo");
-resultado = document.getElementById("resultado");
+{   sueldo = document.getElementById("sueldo");
+resultado = document.getElementById("")
 	sueldo = parseInt(sueldo);
-    resultado = parseInt(resultado);
-    resultado = sueldo + sueldo * 10;
-    alert("Su sueldo aumento un " + resultado + " %");
+    aumento = parseInt(aumento);
+    aumento = sueldo * 0.1;
+    sueldoconAumento = sueldo + aumento;
+    
 }

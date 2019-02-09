@@ -6,8 +6,7 @@ var uno;
 var dos
 function sumar()
 {	
-	var uno;
-    var dos;
+    
     var suma;
     uno = document.getElementById("numeroUno").value;
     dos = document.getElementById("numeroDos").value;
