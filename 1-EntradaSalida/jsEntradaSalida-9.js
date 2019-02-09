@@ -10,6 +10,6 @@ sueldo = document.getElementById("sueldo");
 resultado = document.getElementById("resultado");
 	sueldo = parseInt(sueldo);
     resultado = parseInt(resultado);
-    resultado = sueldo * sueldo(10%);
-    alert("Su sueldo aumento un " + resultado);
+    resultado = sueldo + sueldo * 10;
+    alert("Su sueldo aumento un " + resultado + " %");
 }
