@@ -51,7 +51,7 @@ sumaTotalDeProductos = precio1 + precio2 + precio3;
 resultado = sumaTotalDeProductos / 100;
 resultado = resultado * 21 + sumaTotalDeProductos;
 
-alert(resultado);
+alert( "El precio final es: " +  resultado);
 
 
 }
