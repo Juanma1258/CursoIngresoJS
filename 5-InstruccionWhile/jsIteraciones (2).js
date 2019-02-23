@@ -1,8 +1,8 @@
 function mostrar()
 {
-	var cont = 0;
-	while(cont < 10){
-		cont --;
+	var cont = 11;
+	while(cont > 0){
+    cont --;
 		console.log(cont);
 	}
 
