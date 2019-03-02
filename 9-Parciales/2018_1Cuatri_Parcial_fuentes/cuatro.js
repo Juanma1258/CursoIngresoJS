@@ -1,27 +1,37 @@
 function mostrar()
 {
 
-var num1;
-var num2;
+var unNumero;
+var otroNumero;
 var suma;
-var resta;
-num1 = prompt("ingrese el num");
-num2 = prompt("ingrese el num");
-if( num1 == num2){
-    alert( num1 + num2 );
-}
-num1 = parseInt(num1);
-num2 = parseInt(num2);
-resta = num1 - num2;
-suma = num2 + num1;
 
-if(num1 > num2){
-    alert(resta);
+unNumero = prompt("ingrese el num");
+otroNumero = prompt("ingrese el num");
+
+unNumero = parseInt(unNumero);
+otroNumero = parseInt(otroNumero);
+suma = unNumero + otroNumero;
+
+if( unNumero == otroNumero)
+{
+    alert( unNumero + "" + otroNumero);
 }
-if( num2 > num1){
-    alert(suma);
-    if(suma > 10){
-        alert(suma +" se pasa de 10");
+else
+{
+    if(unNumero > otroNumero)
+    {
+        alert( unNumero - otroNumero);
+    }
+   else
+   {
+       
+           alert( otroNumero + unNumero);
+       
+       
+            if(suma > 10){
+                alert( suma + " se pasa de 10")
+            }
+       
     }
 }
 }

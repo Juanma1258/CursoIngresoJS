@@ -1,11 +1,9 @@
 function mostrar()
 {
 
-var planetas;
+var planeta = prompt("ingrese el nombre de un planeta");
 
-planetas = prompt("ingrese el nombre de un planeta");
-
-switch(planetas){
+switch(planeta){
     case "mercurio":
     case "venus":
     alert("acá hace más calor");
