@@ -1,13 +1,13 @@
 function mostrar()
 {
 var marca;
+var maxMarca;
 var peso;
-var temperatura;
-var contadorTemperaturaPar = 0;
+var contPeso = 0;
 var maxPeso;
 var minPeso;
-var maxMarca;
-var contPeso = 0;
+var temperatura;
+var contadorTemperaturaPar = 0;
 var acumuladorPeso;
 var flagPesoMaximo = false;
 var respuesta = true;
@@ -17,20 +17,20 @@ var contador = 0
 var acumulador = 0;
 
 while(respuesta == true){
-marca = prompt("ingrese marca");
-peso = prompt("ingrese peso");
+    marca = prompt("ingrese marca");
+    peso = prompt("ingrese peso");
 while(peso < 1 || peso > 100){
     peso = prompt("reingrese peso")
 }
-temperatura = prompt("ingrese temperatura");
+    temperatura = prompt("ingrese temperatura");
 while(temperatura < -30 || temperatura > 30){
     temperatura = prompt("reingrese temperatura");
 }
 /* todo esto es solo validación*/
 
 /*punto a) cant de temp pares*/
-if(contadorTemperaturaPar % 2 == 0){/*para saber las cant de temperaturas pares */
-    contadorTemperaturaPar ++; /*cuenta la cant de temperaturas */
+if(temperatura % 2 == 0){                                                         /*para saber las cant de temperaturas pares */
+    contadorTemperaturaPar ++;                                                    /*cuenta la cant de temperaturas */
 
 }
 /* punto b) maximo peso */
@@ -49,9 +49,9 @@ acumuladorPeso = acumuladorPeso + peso;
 
 respuesta = confirm("desea ingresar otro producto?");
 }
-document.write("cantidad de tempe pares" + contadorTemperaturaPar);
-document.write("el producto maximo es " + maxMarca);
-document.write("")
+document.write(" la cantidad de temperaturas pares es " + contadorTemperaturaPar + " " );
+document.write(" el producto maximo es " + maxMarca);
+document.write(" la cantidad de temperaturas bajo 0 es " + contTemperaturaMenosCero + " ");
 document.write("")
 }
 /* "do while" primero hace y despues evalúa."while" evalúa y después hace*/

@@ -20,7 +20,7 @@ switch(planeta){
     case "saturno":
     case "pluton":
     default:
-    alert("no está en la lista");
+    alert("no está en la lista");  
     break;
 }
 }

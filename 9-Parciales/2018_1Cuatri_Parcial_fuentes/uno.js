@@ -12,6 +12,6 @@ ancho = parseInt(ancho);
 largo = parseInt(largo);
 perimetro = 2*(ancho + largo);
 
-alert("el perímetro es: " + perimetro);
+alert("el perímetro es: " + perimetro); 
 
 }
