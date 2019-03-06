@@ -3,11 +3,11 @@ function mostrar()
 
 var sexo = prompt("ingrese f ó m .");
 
-document.getElementById('Sexo').value=sexo;
+document.getElementById('Sexo').value = sexo;
 
-do{
-prompt("ingrese nuevamente") = nombre;
-} while(nombre == "f" || nombre == "m");
+while( sexo != "f" && sexo != "m"){
+    sexo = prompt("reingrese sexo");
+}
+}
 
-}//FIN DE LA FUNCIÓN
-/*
+
