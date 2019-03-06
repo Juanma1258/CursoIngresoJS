@@ -4,9 +4,16 @@ var nota;
 var sexo;
 var contVaron = 0;
 var nota;
-var respuesta = true;
+var cont = 0;
+var flagNotaMinima = false;
+var notaMin;
+var sexoMin;
 
-while( respuesta == true){
+
+while(cont < 5){
+    cont ++;
+
+
 nota = prompt("ingrese nota");
 while(nota < 0 || nota > 10){
     nota = prompt("reingrese nota");
@@ -15,13 +22,19 @@ sexo = prompt("ingrese sexo");
 while(sexo != "m" && sexo != "f"){
     sexo = prompt("reingrese sexo");
 }
-if(sexo == "m"){
+
+if(flagNotaMinima == false || nota < notaMin || sexo == "f" && sexo == "m"){
+    sexoMin = sexo;
+    notaMin = nota;
+    flagNotaMinima = true;
+}
+if(sexo == "m" && nota >= 6){
     contVaron ++;
     
+} 
+
 }
-respuesta = confirm("desea ingresar mas datos?");
+alert("La nota minima es "  + notaMin + " y el sexo es " + sexoMin + ".La cantidad de varones con una nota mayor a 6 es " + contVaron);
+
 }
- if(contVaron == 5){
-     document.write("la cantidad de varones es " + contVaron);
-}
-}
+
