@@ -1,26 +1,32 @@
-function mostrar()
-{
+function mostrar() {
 
-var planeta = prompt("ingrese el nombre de un planeta");
+    var continente;
+    var formaPago;
+    var cantidadDeDias;
+    var importeBruto;
+    var descuento;
+    var precioFinal;
 
-switch(planeta){
-    case "mercurio":
-    case "venus":
-    alert("acá hace más calor");
-    break;
-    case "tierra":
-    alert("acá vivimos");
-    break;
-    case "urano":
-    case "neptuno":
-    alert("acá hace más frío");
-    break;
-    case "marte":
-    case "jupiter":
-    case "saturno":
-    case "pluton":
-    default:
-    alert("no está en la lista");  
-    break;
+    continente = prompt("ingrese continente");
+    formaPago = prompt("froma de pago");
+    cantidadDeDias = prompt("ingrese cantidad de dias");
+
+    importeBruto = cantidadDeDias * 100
+    switch(continente){
+        case "america":
+        if(formaPago == "debito"){
+            descuento = 60
+        } else{
+            descuento = 50; //         ó  50/100 
+        }
+        break;
+        case "africa":
+        break;
+        case "europa":
+        break;
+        default:
+        break;
+    }
+    precioFinal = importeBruto* descuento/ 100;
 }
-}
+
