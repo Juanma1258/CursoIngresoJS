@@ -1,20 +1,25 @@
 function mostrar() {
+
     var nota;
     var sexo;
-    var contVaron = 0;
-    var contador = 0;
-    var flagNotaMinima = false;
     var notaMin;
     var sexoMin;
-    var acumulador = 0;
     var promedio;
 
+    var flagNotaMinima = false;
+    var contadorVaron = 0;
+    var contador = 0;
+    var acumuladorNota = 0;
 
     while (contador < 3) {
         contador++;
 
 
         nota = prompt("ingrese nota");
+        nota = parseInt(nota);
+        acumuladorNota = parseInt(acumuladorNota);
+        acumuladorNota = acumuladorNota + nota
+
         while (nota < 0 || nota > 10) {
             nota = prompt("reingrese nota");
         }
@@ -30,16 +35,12 @@ function mostrar() {
         }
         if (sexo == "m" && nota > 6) {
             contadorVaron++;
-
         }
-
-        acumulador = acumulador + nota;
-        contador++;
-        
     }
-    promedio = acumulador / contador;
-
-    alert("el promedio es " + promedio + "." + "La nota minima es " + notaMin + " y el sexo es " + sexoMin + ".La cantidad de varones con una nota mayor a 6 es " + contVaron);
+    promedio = acumuladorNota / contador;
+    document.write("el promedio es " + promedio);
+    document.write("La nota minima es" + notaMin + " y el sexo es " + sexoMin);
+    document.write("La cantidad de varones con una nota mayor a 6 es " + contadorVaron);
 
 }
 
