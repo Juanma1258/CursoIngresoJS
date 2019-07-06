@@ -3,55 +3,59 @@ A.	Ingresar tres precios de productos y mostrar la suma de los mismos.
 B.	Ingresar tres precios de productos y mostrar el promedio de los mismos.
 C.	ingresar tres precios de productos  y mostrar precio final (más IVA 21%).
 */
-var precio1; 
-var precio2;
-var precio3;
 function Sumar () 
 {
-var suma;
-precio1 = document.getElementById("PrecioUno").value;
-precio2 = document.getElementById("PrecioDos").value;
-precio3 = document.getElementById("PrecioTres").value;
-precio1 = parseInt(precio1);
-precio2 = parseInt(precio2);
-precio3 = parseInt(precio3);
-suma = precio1 + precio2 + precio3;
-alert( "el resultado es: " +  suma);
+    var primerPrecio;
+    var segundoPrecio;
+    var tercerPrecio;
+    var suma;
+
+    primerPrecio = document.getElementById("PrecioUno").value;
+    segundoPrecio = document.getElementById("PrecioDos").value;
+    tercerPrecio = document.getElementById("PrecioTres").value;
+
+    primerPrecio = parseInt(primerPrecio);
+    segundoPrecio = parseInt(segundoPrecio);
+    tercerPrecio = parseInt(tercerPrecio);
+
+    suma = primerPrecio + segundoPrecio + tercerPrecio;
+    alert(suma);
 }
 function Promedio () 
 {
-var sumaDePrecios;
-var resultado;
-precio1 = document.getElementById("PrecioUno").value;
-precio2 = document.getElementById("PrecioDos").value;
-precio3 = document.getElementById("PrecioTres").value;
-precio1 = parseInt(precio1);
-precio2 = parseInt(precio2);
-precio3 = parseInt(precio3);
-sumaDePrecios = parseInt(sumaDePrecios);
-sumaDePrecios = precio1 + precio2 + precio3;
-resultado = sumaDePrecios / 3;
-alert("el promedio es: " + resultado);
+    var primerPrecio;
+    var segundoPrecio;
+    var tercerPrecio;
+    var promedio;
+
+    primerPrecio = document.getElementById("PrecioUno").value;
+    segundoPrecio = document.getElementById("PrecioDos").value;
+    tercerPrecio = document.getElementById("PrecioTres").value;
+
+    primerPrecio = parseInt(primerPrecio);
+    segundoPrecio = parseInt(segundoPrecio);
+    tercerPrecio = parseInt(tercerPrecio);
+
+    promedio = (primerPrecio + segundoPrecio + tercerPrecio) / 3;
+    alert(promedio);
 }
 function PrecioFinal () 
 {
-var sumaTotalDeProductos;
-var resultado;
-var iva;
-precio1 = document.getElementById("PrecioUno").value;
-precio2 = document.getElementById("PrecioDos").value;
-precio3 = document.getElementById("PrecioTres").value;
-precio1 = parseInt(precio1);
-precio2 = parseInt(precio2);
-precio3 = parseInt(precio3);
-sumaTotalDeProductos = parseInt(sumaTotalDeProductos);
-resultado = parseInt(resultado);
-iva = parseInt(iva);
-sumaTotalDeProductos = precio1 + precio2 + precio3;
-resultado = sumaTotalDeProductos / 100;
-resultado = resultado * 21 + sumaTotalDeProductos;
+    var primerPrecio;
+    var segundoPrecio;
+    var tercerPrecio;
+    var precioFinal;
+    var iva;
 
-alert( "El precio final es: " +  resultado);
+    primerPrecio = document.getElementById("PrecioUno").value;
+    segundoPrecio = document.getElementById("PrecioDos").value;
+    tercerPrecio = document.getElementById("PrecioTres").value;
 
+    primerPrecio = parseInt(primerPrecio);
+    segundoPrecio = parseInt(segundoPrecio);
+    tercerPrecio = parseInt(tercerPrecio);
 
+    precioFinal = primerPrecio + segundoPrecio + tercerPrecio;
+    iva = precioFinal + (precioFinal *21/100)
+    alert(iva);
 }
