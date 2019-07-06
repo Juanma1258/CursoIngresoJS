@@ -9,4 +9,3 @@ function mostrar()
     alert("su nombre es " + nombre + " y tiene " + edad +  " años");
  
 }
-
