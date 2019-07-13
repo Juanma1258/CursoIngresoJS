@@ -1,19 +1,24 @@
 function mostrar()
 {
-	//Genero el número RANDOM entre 1 y 10 
+	var numero;
 	var nota;
-	nota = parseInt(Math.random()*10 + 1);
-	
-	if(nota == 10 || nota == 9){
-		alert( "Tu nota es " + nota + " .Excelente");
-	}
-	
-	if(nota >= 4 && nota < 9){
-		alert( "Tu nota es " + nota + " .Aprobaste");
-	}
-	if(nota < 4){
-		alert("Tu nota es " + nota + " .Vamos, la próxima se puede");
-	}
-	
 
+	numero = Math.floor(Math.random()*(11-1))+1;
+
+	if(numero == 9 || numero == 10)
+	{
+		nota = "excelente";
+	}
+	else
+	{
+		if(numero > 4)
+		{
+			nota = "aprobado";
+		}
+		else
+		{
+			nota = "desaprobado";
+		}
+	}
+	alert( numero + nota);
 }//FIN DE LA FUNCIÓN
