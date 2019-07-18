@@ -1,32 +1,31 @@
-function mostrar() {
+function mostrar() 
+{
+    var planeta;
+    var mensaje;
 
-    var continente;
-    var formaPago;
-    var cantidadDeDias;
-    var importeBruto;
-    var descuento;
-    var precioFinal;
+    planeta = prompt("ingrese un planeta");
 
-    continente = prompt("ingrese continente");
-    formaPago = prompt("froma de pago");
-    cantidadDeDias = prompt("ingrese cantidad de dias");
-
-    importeBruto = cantidadDeDias * 100
-    switch(continente){
-        case "america":
-        if(formaPago == "debito"){
-            descuento = 60
-        } else{
-            descuento = 50; //         ó  50/100 
-        }
-        break;
-        case "africa":
-        break;
-        case "europa":
-        break;
+    switch( planeta)
+    {
+        case "mercurio":
+        case "venus":
+            mensaje = "acá hace más calor";
+            break;
+        case "tierra":
+            mensaje = "acá vivimos";
+            break;
+        case "marte":
+        case "jupiter":
+        case "saturno":
+        case "urano":
+        case "neptuno":
+        case "pluton":
+            mensaje = "acá hace más frio";
+            break;
         default:
-        break;
+            mensaje = "no es un planeta válido";
+            break;
     }
-    precioFinal = importeBruto* descuento/ 100;
+    alert(mensaje);
 }
 
