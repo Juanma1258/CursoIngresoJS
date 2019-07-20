@@ -4,8 +4,9 @@ function mostrar()
 
     numero = prompt("ingrese numero");
 
-    while( numero <= 0 || numero >= 9)
+    while( isNaN(numero) || numero <= 0 || numero >= 9)
     {
+      
       numero = prompt("reingrese numero");
     
     }

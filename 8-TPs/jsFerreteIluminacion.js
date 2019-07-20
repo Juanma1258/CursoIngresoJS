@@ -12,40 +12,32 @@ function CalcularPrecio ()
 { 
   var precioLamparas;
   var cantidadLamparas;
+  var marca;
   var descuento;
   var resultado;
-  var marca;
 
   cantidadLamparas = document.getElementById("Cantidad").value;
   marca = document.getElementById("Marca").value;
-
-  precioLamparas = parseInt(precioLamparas);
-  cantidadLamparas = parseInt(cantidadLamparas);
   precioLamparas = 35;
+  resultado = cantidadLamparas * precioLamparas;
 
   if(cantidadLamparas >= 6)
   {
-    resultado = (cantidadLamparas * precioLamparas) /100*50;
+    descuento = resultado /100*50;
+    resultado = resultado - descuento;
   }
-      else
+    else
+    {
+      if(cantidadLamparas == 5 && marca == "ArgentinaLuz")
       {
-        if(cantidadLamparas == 5 && marca == "ArgentinaLuz")
-        {
-          resultado = (cantidadLamparas * precioLamparas) /100*40;
-        }
-          else
-          {
-            if(marca =! "ArgentinaLuz")
-            {
-              resultado = (cantidadLamparas * precioLamparas) /100*30;
-            }
-          }
+        //descuento 40%
       }
-
-
-
-
-
+        else if(marca != "ArgentinaLuz")
+        {
+          //descuento 30%
+        }
+        
+    }
 
 
 
