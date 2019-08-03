@@ -1,61 +1,47 @@
-function mostrar() {
+function mostrar() 
+{
     var letra;
-    var respuesta;
     var numero;
-    var contadorNumeroPar;
-    var contadorNumeroImpar;
-    var contadorCero;
-    var acumuladorNumeroNegativo;
-    var acumuladorNumeroPositivo;
-    var contadorNumeroPositivo;
-    var promedio;
+    var respuesta = true;
 
-    letra = true;
-    respuesta = true;
-    contadorNumeroPar = 0;
-    contadorNumeroImpar = 0;
-    contadorCero = 0;
-    acumuladorNumeroNegativo = 0;
-    contadorNumeroPositivo = 0;
-    acumuladorNumeroPositivo = 0;
+    var contadorNumerosPares = 0;
+    var contadorNumerosImpares = 0;
 
-    while (respuesta == true) {
 
+    while(respuesta == true)
+    {
+        letra = prompt("ingrese una letra");
+        while((letra < "A" || letra > "Z")&&(letra < "a" || letra > "z"))
+        {
+            letra = prompt("reingrese letra");
+        }
         numero = prompt("ingrese numero");
         numero = parseInt(numero);
-        while (numero < -100 || numero > 100) {
+        while(isNaN(numero) || numero < -100 || numero > 100)
+        {
             numero = prompt("reingrese numero");
+            numero = parseInt(numero);
         }
-        letra = prompt("ingrese letra");
-        while (isNaN(letra) == false) {
-            letra = prompt("reingrese letra")
+        if(numero %2 == 0)
+        {
+            contadorNumerosPares++;
         }
-
-        if (numero % 2 == 0) {
-            contadorNumeroPar++;
-        }
-        else {
-            contadorNumeroImpar++;
-        }
-        if (numero == 0) {
-            contadorCero++;
-        }
-        if (numero < 0) {
-          acumuladorNumeroNegativo = acumuladorNumeroNegativo + numero;
-
-        }
-        else{
-            contadorNumeroPositivo++
-            acumuladorNumeroPositivo = acumuladorNumeroPositivo + numero;
-        }
-        promedio = acumuladorNumeroPositivo / 100 * contadorNumeroPositivo;
-        respuesta = confirm("seguir");
+            else
+            {
+                if(numero == 0)
+                {
+                    contadorNumerosCeros++;
+                }
+                else
+                {
+                   contadorNumerosImpares++;
+                }
+            }
+        respuesta = confirm("desea continuar?");
     }
-    document.write("los numeros pares son " + contadorNumeroPar);
-    document.write("la cantidad de numeros impares es" + contadorNumeroImpar);
-    document.write("la cantidad de ceros es " + contadorCero);
-    document.write("la suma de los numeros negativos es " + acumuladorNumeroNegativo);
-    document.write("el promedio de los numeros positivos es " + promedio);
+    document.write("la cantidad de numeros pares es " + contadorNumerosPares);
+    document.write("la cantidad de numeros impares es " + contadorNumerosImpares);
+    
 }
 
 
