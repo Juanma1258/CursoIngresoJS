@@ -1,46 +1,45 @@
-function mostrar() {
-
+function mostrar() 
+{
+    var contador = 0;
     var nota;
     var sexo;
-    var notaMin;
-    var sexoMin;
-    var promedio;
 
-    var flagNotaMinima = false;
-    var contadorVaron = 0;
-    var contador = 0;
-    var acumuladorNota = 0;
+    var notaMasBaja = 0;
+    var sexoNotaMasBaja = 0;
 
-    while (contador < 3) {
-        contador++;
-
-
+    while(contador < 2)
+    {
         nota = prompt("ingrese nota");
         nota = parseInt(nota);
-        acumuladorNota = parseInt(acumuladorNota);
-        acumuladorNota = acumuladorNota + nota
-
-        while (nota < 0 || nota > 10) {
-            nota = prompt("reingrese nota");
-        }
-        sexo = prompt("ingrese sexo");
-        while (sexo != "m" && sexo != "f") {
-            sexo = prompt("reingrese sexo");
-        }
-
-        if (flagNotaMinima == false || nota < notaMin || sexo == "f" && sexo == "m") {
-            sexoMin = sexo;
-            notaMin = nota;
-            flagNotaMinima = true;
-        }
-        if (sexo == "m" && nota > 6) {
-            contadorVaron++;
-        }
+    while(isNaN(nota) || nota < 0 || nota > 10)
+    {
+        nota = prompt("reingrese nota");
     }
-    promedio = acumuladorNota / contador;
-    document.write("el promedio es " + promedio);
-    document.write("La nota minima es" + notaMin + " y el sexo es " + sexoMin);
-    document.write("La cantidad de varones con una nota mayor a 6 es " + contadorVaron);
 
+        sexo = prompt("ingrese sexo");
+    while(sexo != "f" && sexo != "m")
+    {
+        sexo = prompt("reingrese sexo");
+    }
+      if(contador == 0)
+      {
+        notaMasBaja = nota;
+        sexoNotaMasBaja = sexo;
+      }
+      else
+      {
+          if(nota < notaMasBaja)
+          {
+              notaMasBaja = nota;
+              sexoNotaMasBaja = sexo
+          }
+ 
+        contador++
+    }
+   
+    contador++
+    }
+    document.write("nota mas baja " + notaMasBaja);
+    document.write("sexo con la nota mas baja" + sexoNotaMasBaja);
 }
 
